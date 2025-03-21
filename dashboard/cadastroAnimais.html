@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <title>Dashboard - Cadastro Animais</title>
+    <style type="text/tailwindcss">
+        .input-style {
+            @apply bg-white py-3 px-6 rounded-2xl border border-slate-400 focus:outline-indigo-600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU SUPERIOR -->
+    <div class="bg-slate-900 p-4 min-h-24 flex items-center">
+        <div class="container mx-auto flex flex-col gap-3 items-center md:flex md:flex-row justify-between">
+            <a href="/index.html"><img src="../assets/logo-petx-branco.svg" alt=""></a>
+            <ul class="list-none text-sm flex items-center gap-4 md:gap-12">
+                <li class="text-white hover:text-indigo-400  hover:transition-all duration-500"><a
+                        href="/dashboard/index.html">Painel Principal</a></li>
+                <li class="text-white hover:text-indigo-400  hover:transition-all duration-500"><a
+                        href="/dashboard/animais.html">Animais</a></li>
+                <li class="text-white hover:text-indigo-400  hover:transition-all duration-500"><a
+                        href="/dashboard/estoque.html">Estoque</a></li>
+                <li class="text-white hover:text-indigo-400  hover:transition-all duration-500"><a
+                        href="/dashboard/configuracoes.html">Configurações</a></li>
+                <li class="text-white hover:text-indigo-400  hover:transition-all duration-500"><a href="../">Sair</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="py-20 px-2 flex items-center">
+        <div class="flex flex-col gap-4 container  mx-auto ">
+            <div class="flex justify-between items-center w-full">
+                <span class="font-semibold text-2xl">Animais registrados</span>
+                <button
+                    class=" rounded-2xl bg-white text-sm outline-indigo-500 hover:bg-slate-200 text-slate-900 px-6 py-3 min-h-11 text-slate-900  border-2 border-slate-300 d-flex gap-2.5 itens-center font-medium ">
+                    <i class="ph ph-paper-plane-tilt"></i>
+                    <span>Button Primary</span>
+                </button>
+            </div>
+
+            <form action="" class="flex flex-col gap-4">
+                <div class="grid grid-cols-3 gap-4 gap-x-16 bg-slate-50 rounded-xl px-16 py-10">
+                    <h1 class="font-semibold text-xl col-span-3 mb-4 text-slate-400">Entrada</h1>
+
+                    <label class="font-semibold flex flex-col gap-4" for="dataEntrada">
+                        Data de Entrada
+                        <input type="date" id="dataEntrada" class="input-style">
+                        </input>
+                    </label>
+
+                    <label class="font-semibold flex flex-col gap-4" for="entradaAtraves">
+                        Entrada através de
+                        <select type="text" id="entradaAtraves" required class="input-style">
+                            <option value="cao">GM (Guarda Municipal)</option>
+                            <option value="gato">SMA (Secretaria do Meio Ambiente)</option>
+                            <option value="gato">Deixado no Portão</option>
+                            <option value="gato">Funcionário e Colaborador</option>
+                            <option value="gato">Diretoria</option>
+                            <option value="gato">Comunidade</option>
+                        </select>
+                    </label>
+
+                    <label class="font-semibold flex flex-col gap-4" for="numeroOcorrencia">
+                        Número da Ocorrência
+                        <input type="number" id="numeroOcorrencia" min="0" class="input-style">
+                        </input>
+                    </label>
+
+                </div>
+
+                <div class="grid grid-cols-3 gap-4 gap-x-16 bg-slate-50 rounded-xl px-16 py-10">
+                    <span class="font-semibold text-xl col-span-3 mb-4 text-slate-400">Endereço</span>
+
+                    <label class="font-semibold flex flex-col gap-4" for="rua">Rua
+                        <input type="text" id="rua" required class="input-style">
+                        </input>
+                    </label>
+
+                    <label class="font-semibold flex flex-col gap-4" for="bairro">Bairro
+                        <input type="text" id="bairro" required class="input-style">
+                        </input>
+                    </label>
+
+                    <label class="font-semibold flex flex-col gap-4" for="municipio">Município
+                        <input type="text" id="municipio" required class="input-style">
+                        </input>
+                    </label>
+
+                    <label class="font-semibold flex flex-col gap-4" for="estado">Estado
+                        <input type="text" id="estado" required class="input-style">
+                        </input>
+                    </label>
+
+                    <label class="font-semibold flex flex-col gap-4" for="denunciante">Nome do
+                        denunciante ou Tutor
+                        <input type="text" id="denunciante" required class="input-style">
+                        </input>
+                    </label>
+
+                    <label class="font-semibold flex flex-col gap-4" for="cpf">CPF
+                        <input type="text" id="cpf" required maxlength="11" class="input-style">
+                        </input>
+                    </label>
+
+                    <label class="font-semibold flex flex-col gap-4" for="telefone">Telefone
+                        <input type="tel" id="telefone" class="input-style">
+                        </input>
+                    </label>
+                </div>
+
+                <div class="grid grid-cols-3 gap-4 gap-x-16 bg-slate-50 rounded-xl px-16 py-10">
+                    <span class="font-semibold text-xl col-span-3 mb-4 text-slate-400">Dados do Animal</span>
+
+                    <label class="font-semibold flex flex-col gap-4" for="nomeAnimal">Nome
+                        do animal
+                        <input type="text" id="nomeAnimal" required class="input-style">
+                        </input>
+                    </label>
+
+
+                    <label class="font-semibold flex flex-col gap-4" for="especie">Espécie
+                        <select type="text" id="especie" required class="input-style">
+                            <option value="cao">Cão</option>
+                            <option value="gato">Gato</option>
+                        </select>
+                    </label>
+
+                    <div class="grid grid-cols-2 gap-4">
+
+                        <label class="font-semibold flex flex-col gap-4" for="idade">Idade
+                            <select type="text" id="idade" required class="input-style">
+                                <option value="adulto">Adulto</option>
+                                <option value="filhote">Filhote</option>
+                                <option value="filhote">Sênior</option>
+                            </select>
+                        </label>
+
+                        <label class="font-semibold flex flex-col gap-4" for="sexo">Sexo
+                            <select type="text" id="sexo" required class="input-style">
+                                <option value="macho">Macho</option>
+                                <option value="femea">Fêmea</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <label class="font-semibold flex flex-col gap-4" for="raca">Raça
+                        <input type="text" id="raca" required class="input-style">
+                        </input>
+                    </label>
+
+                    <label class="font-semibold flex flex-col gap-4" for="cor">Cor/Pelagem
+                        <input type="text" id="cor" class="input-style">
+                        </input>
+                    </label>
+
+                    <label class="font-semibold flex flex-col gap-4" for="comportamento">Comportamento
+                        <input type="text" id="comportamento" class="input-style">
+                        </input>
+                    </label>
+
+
+                    <label class="font-semibold flex flex-col gap-4" for="porte">Porte
+                        <input type="text" id="porte" required class="input-style">
+                        </input>
+                    </label>
+
+
+                    <label class="font-semibold flex flex-col gap-4" for="motivoRecolhimento">Motivo
+                        do Recolhimento
+                        <input type="text" id="motivoRecolhimento" class="input-style">
+                        </input>
+                    </label>
+
+
+                    <label class="font-semibold flex flex-col gap-4" for="destinoAnimal">Destino
+                        do Animal
+                        <select type="text" id="destinoAnimal" required class="input-style">
+                            <option value="abrigo">Abrigo</option>
+                            <option value="devolucaoTutor">Devolução Tutor</option>
+                            <option value="comunitario">Comunitário</option>
+                            <option value="procurarTutor">Procurar Tutor</option>
+                        </select>
+                    </label>
+
+
+                    <label class="font-semibold flex flex-col gap-4" for="condicaoAnimal">Condição do Animal
+                        <input type="text" id="condicaoAnimal" class="input-style">
+                        </input>
+                    </label>
+
+
+                    <label class="font-semibold gap-4 flex flex-col" for="avaliacaoClinica">
+                        <div class="flex items-center gap-4">
+                            <input type="checkbox" id="avaliacaoClinica" name="Avaliação Clínica"
+                                class="accent-indigo-600 h-5 w-5">
+                            </input>
+                            Avaliação Clínica
+                        </div>
+                        <textarea name="" class="input-style" placeholder="Digite aqui as observações"
+                            id="observacao"></textarea>
+                    </label>
+
+
+                </div>
+
+                <div class="w-full flex justify-end mt-8">
+                    <button type="submit"
+                        class="rounded-2xl bg-indigo-600 hover:bg-indigo-700 focus:outline-indigo-700 font-medium outline-indigo-500 text-base px-6 py-3 min-h-11 text-white outline-1 gap-2.5">
+                        <i class="ph ph-paper-plane-tilt"></i>
+                        <span>Button</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var cpf = document.querySelector("#cpf");
+        cpf.addEventListener("blur", function () {
+            if (cpf.value) cpf.value = cpf.value.match(/.{1,3}/g).join(".").replace(/\.(?=[^.]*$)/, "-");
+        });
+    </script>
+
+</body>
+
+</html>

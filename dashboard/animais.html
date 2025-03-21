@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+
+    <style type="text/tailwindcss">
+        .input-style {
+            @apply py-3 px-6 rounded-2xl border border-slate-400 focus:outline-indigo-600;
+        }
+
+    </style>
+
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+    <!-- MENU SUPERIOR -->
+    <div class="bg-slate-900 p-4 min-h-24 flex items-center">
+        <div class="container mx-auto flex flex-col gap-3 items-center md:flex md:flex-row justify-between">
+            <a href="/index.html"><img src="../assets/logo-petx-branco.svg" alt=""></a>
+            <ul class="list-none text-sm flex items-center gap-4 md:gap-12">
+                <li class="text-white hover:text-indigo-400  hover:transition-all duration-500"><a
+                        href="/dashboard/index.html">Painel Principal</a></li>
+                <li class="text-white hover:text-indigo-400  hover:transition-all duration-500"><a
+                        href="/dashboard/animais.html">Animais</a></li>
+                <li class="text-white hover:text-indigo-400  hover:transition-all duration-500"><a
+                        href="/dashboard/estoque.html">Estoque</a></li>
+                <li class="text-white hover:text-indigo-400  hover:transition-all duration-500"><a
+                        href="/dashboard/configuracoes.html">Configurações</a></li>
+                <li class="text-white hover:text-indigo-400  hover:transition-all duration-500"><a href="../">Sair</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="py-12 px-2 flex items-center">
+        <div class="container mx-auto items-center">
+
+            <h1 class="font-semibold text-xl col-span-4 mb-4">Animais registrados</h1>
+
+            <div class="flex justify-between items-center md:flex-row flex-col gap-2">
+                <div class="md:w-auto items-center w-full gap-2 flex">
+                    <input type="text" id="search" name="search" placeholder="Pesquisar"
+                        class="py-3 px-6 rounded-2xl border border-slate-400 focus:outline-indigo-600">
+                    </input>
+                    <button
+                        class="rounded-2xl bg-indigo-600 hover:bg-indigo-700 focus:outline-indigo-700 font-medium outline-indigo-500 text-base px-6 py-3 min-h-11 text-white outline md:w-auto w-full">
+                        <i class="ph ph-paper-plane-tilt"></i>
+                        <a href="/dashboard/cadastroAnimais.html">Pesquisar</a>
+                    </button>
+                </div>
+                <button
+                    class="rounded-2xl bg-indigo-600 hover:bg-indigo-700 focus:outline-indigo-700 font-medium outline-indigo-500 text-base px-6 py-3 min-h-11 text-white outline md:w-auto w-full">
+                    <i class="ph ph-paper-plane-tilt"></i>
+                    <a href="/dashboard/cadastroAnimais.html">Cadastrar novo</a>
+                </button>
+            </div>
+
+
+
+            <div class="overflow-x-auto md:overflow-visible mt-4">
+                <div class="min-w-full md:min-w-0">
+
+                    <!-- Cabeçalho para desktop -->
+                    <div class="grid grid-cols-5  bg-gray-100 font-bold hidden md:grid rounded-2xl p-4 mt-4">
+                        <div>Nome</div>
+                        <div>Idade</div>
+                        <div>Espécie</div>
+                        <div>Status</div>
+                        <div>Ações</div>
+                    </div>
+
+                    <!-- Linhas -->
+                    <div class="grid gap-2 md:gap-0">
+                        <!-- Item 1 -->
+                        <div
+                            class="grid grid-cols-1 p-4 bg-slate-100 rounded-2xl  md:grid-cols-5 md:bg-white md:border-b md:border-slate-200 md:rounded-none ">
+                            <div><span class="md:hidden font-semibold">Nome: </span>Carlos</div>
+                            <div><span class="md:hidden font-semibold">Idade: </span>Adulto</div>
+                            <div><span class="md:hidden font-semibold">Espécie: </span>Cão</div>
+                            <div><span class="md:hidden font-semibold">Status: </span>No abrigo</div>
+                            <div class="flex gap-2">
+                                <a href="#" class="text-blue-600 hover:underline">Editar</a>
+                                <a href="#" class="text-blue-600 hover:underline">Visualizar</a>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div
+                            class="grid grid-cols-1 p-4 bg-slate-100 rounded-2xl  md:grid-cols-5 md:bg-white md:border-b md:border-slate-200 md:rounded-none ">
+                            <div><span class="md:hidden font-semibold">Nome: </span>Carlos</div>
+                            <div><span class="md:hidden font-semibold">Idade: </span>Adulto</div>
+                            <div><span class="md:hidden font-semibold">Espécie: </span>Cão</div>
+                            <div><span class="md:hidden font-semibold">Status: </span>No abrigo</div>
+                            <div class="flex gap-2">
+                                <a href="#" class="text-blue-600 hover:underline">Editar</a>
+                                <a href="#" class="text-blue-600 hover:underline">Visualizar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>0
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <title>Cadastro Estoque</title>
+
+    <style type="text/tailwindcss">
+        .input-style {
+            @apply bg-white py-3 px-6 rounded-2xl border border-slate-400 focus:outline-indigo-600;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- MENU SUPERIOR -->
+    <div class="bg-slate-900 p-4 min-h-24 flex items-center">
+        <div class="container mx-auto flex flex-col gap-3 items-center md:flex md:flex-row justify-between">
+            <a href="/index.html"><img src="../assets/logo-petx-branco.svg" alt=""></a>
+            <ul class="list-none text-sm flex items-center gap-4 md:gap-12">
+                <li class="text-white hover:text-indigo-400  hover:transition-all duration-500"><a
+                        href="/dashboard/index.html">Painel Principal</a></li>
+                <li class="text-white hover:text-indigo-400  hover:transition-all duration-500"><a
+                        href="/dashboard/animais.html">Animais</a></li>
+                <li class="text-white hover:text-indigo-400  hover:transition-all duration-500"><a
+                        href="/dashboard/estoque.html">Estoque</a></li>
+                <li class="text-white hover:text-indigo-400  hover:transition-all duration-500"><a
+                        href="/dashboard/configuracoes.html">Configurações</a></li>
+                <li class="text-white hover:text-indigo-400  hover:transition-all duration-500"><a href="../">Sair</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class=" py-20 px-2 flex items-center">
+        <div class="gap-4 flex flex-col container mx-auto">
+
+            <div class="flex justify-between items-center w-full">
+                <span class="font-semibold text-2xl"> Cadastro de estoque </span>
+                <button
+                    class=" rounded-2xl bg-white text-sm outline-indigo-500 hover:bg-slate-200 text-slate-900 px-6 py-3 min-h-11 text-slate-900 border border-2 border-slate-300 d-flex gap-2.5 itens-center font-medium ">
+                    <i class="ph ph-paper-plane-tilt"></i>
+                    <span>Button Primary</span>
+                </button>
+            </div>
+
+
+            <form action="" class="">
+                <div class="grid grid-cols-2 gap-4 gap-x-16 bg-slate-50 rounded-xl px-20 py-16">
+
+                    <label class="font-semibold flex flex-col gap-4" for="idade">Categoria
+                        <select type="text" id="idade" class="input-style">
+                            <option value="alimento">Alimento</option>
+                            <option value="medicamento">Medicamento</option>
+                            <option value="higiene">Higiene</option>
+                            <option value="briquedos">Brinquedos</option>
+                        </select>
+                    </label>
+
+                    <label class="font-semibold flex flex-col gap-4" for="nomeItem">Nome
+                        <input type="text" id="nomeItem" required class="input-style">
+                        </input>
+                    </label>
+
+
+                    <label class="font-semibold flex flex-col gap-4" for="descricao">Descrição
+                        <input type="text" id="descricao" class="input-style"  placeholder="Premium">
+                        </input>
+                    </label>
+
+                    <div class="grid grid-cols-2 gap-4">
+
+                        <label class="font-semibold flex flex-col gap-4" for="quantidade">Quantidade
+                            <input type="number" id="quantidade" min="0" class="input-style">
+                            </input>
+                        </label>
+
+                        <label class="font-semibold flex flex-col gap-4" for="tipoUnidade">Tipo de unidade
+                            <select id="tipoUnidade" type="text" class="input-style">
+                                <option value="litro">L</option>
+                                <option value="kilo">Kg</option>
+                                <option value="grama">g</option>
+                                <option value="unidade">Un</option>
+                                <option value="caixa">Cx</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <label class="font-semibold flex flex-col gap-4" for="tipo">Tipo
+                        <input type="text" id="tipo" class="input-style" placeholder="Castrado | Doente | Filhote">
+                        </input>
+                    </label>
+
+                    <label class="font-semibold flex flex-col gap-4" for="idade">Idade
+                        <select type="text" id="idade" class="input-style">
+                            <option value="adulto">Adulto</option>
+                            <option value="filhote">Filhote</option>
+                            <option value="filhote">Sênior</option>
+                        </select>
+                    </label>
+
+                    <label class="font-semibold flex flex-col gap-4 col-span-2" for="observacao">Observação
+                       <textarea name="" class="input-style " id="observacao" placeholder="Digite aqui as observações"></textarea>
+                    </label>
+                </div>
+                <div class="w-full flex justify-end mt-8">
+                    <button type="submit"
+                        class="rounded-2xl bg-indigo-600 hover:bg-indigo-700 focus:outline-indigo-700 font-medium outline-indigo-500 text-base px-6 py-3 min-h-11 text-white outline outline-1">
+                        <i class="ph ph-paper-plane-tilt"></i>
+                        <span>Button</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
